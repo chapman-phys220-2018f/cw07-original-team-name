@@ -2,7 +2,7 @@
 
 # PHYS220/MATH220/CPSC220 CW 7
 
-**Author(s):** **Paul Hatem, Nathaniel**
+**Author(s):** **Paul Hatem, Natanael Alpay**
 
 ## Specification
 
