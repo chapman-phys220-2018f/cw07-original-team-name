@@ -47,6 +47,10 @@ def gen_gaussian_array(a, b, n=1000):
     """gen_gaussian_array(a, b, n=1000)
     Generate a discrete approximation of a Gaussian function, including its
     domain and range, stored as a pair of numpy arrays.
+    
+    """
+    x = np.linspace(a,b,endpoint=True,n)
+    return x 
     """
     Args:
         a (float) : Lower bound of domain
@@ -58,7 +62,7 @@ def gen_gaussian_array(a, b, n=1000):
             x  : [a, ..., b] Array of n equally spaced float64 between a and b
             g  : [g(a), ..., g(b)] Array of Gaussian values matched to x
     
-   
+   """
 
 
 def main(a,b,n=1000):
