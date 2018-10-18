@@ -75,6 +75,8 @@ def gen_gaussian_array(a, b, n=1000):
     for i in x:
         list1.append(gauss(i))
     g = np.array(list1)
+        plt.plot(g)
+        plt.show()
     return(x,g)
 
     pass
