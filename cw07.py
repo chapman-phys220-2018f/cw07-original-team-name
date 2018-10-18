@@ -57,26 +57,28 @@ def gen_gaussian_array(a, b, n=1000):
     #return x
     #for i in range():
     
-    def sinx(x):
+    def sinc(x):
         sinx=numpy.sin(x)/x
         return (sinx)
 
-    def sin1(x):
+    def sinf(x):
         sin1=numpy.sin(1/x)
         return (sin1)
     
 
     def gauss(x):
-    gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2)
-    return (gauss)
+        gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2)
+        return (gauss)
     
     list1 = []
     x = np.linspace(a,b,endpoint=True,n=1000)
     for i in x:
         list1.append(gauss(i))
     g = np.array(list1)
-        plt.plot(g)
-        plt.show()
+    plt.plot(g)
+    plt.show()
+    
+    
     return(x,g)
 
     pass
