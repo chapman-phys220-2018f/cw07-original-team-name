@@ -49,9 +49,19 @@ def gen_gaussian_array(a, b, n=1000):
     domain and range, stored as a pair of numpy arrays.
     
     """
-    x = np.linspace(a,b,endpoint=True , n=1000)
-    return x
-    for i in range():
+    #x = np.linspace(a,b,endpoint=True , n=1000)
+    #return x
+    #for i in range():
+    
+    
+    list1 = []
+    x = np.linspace(a,b,endpoint=True,n=1000)
+    for i in x:
+        list1.append(gauss(i))
+    g = np.array(list1)
+    return(x,g)
+
+    pass
     """
     Args:
         a (float) : Lower bound of domain
