@@ -72,14 +72,13 @@ def gen_gaussian_array(a, b, n=1000):
             g  : [g(a), ..., g(b)] Array of Gaussian values matched to x
     
    """
-
-def gen_sinc_list(a, b, n=1000)
 """
     Generate a discrete approximation of a Gaussian function, including its
-    domain and range, stored as a pair of numpy arrays.
-    
+    domain and range, stored as a pair of numpy arrays
     """
     
+def gen_sinc_list(a, b, n=1000):
+
     def sinc(x):
         sinx=numpy.sin(x)/x
         return (sinx)
@@ -98,15 +97,16 @@ def gen_sinf_list(a, b, n=1000):
     Generate a discrete approximation of a Gaussian function, including its
     domain and range, stored as a pair of numpy arrays.
     """
+    def sinf(x):
+        sin1=numpy.sin(1/x)
+        return (sin1)
     list1 = []
     x = np.linspace(a,b,endpoint=True,n=1000)
     for i in x:
         list1.append(gauss(i))
     g = np.array(list1)
     
-    def sinf(x):
-        sin1=numpy.sin(1/x)
-        return (sin1)
+
     
     
     
