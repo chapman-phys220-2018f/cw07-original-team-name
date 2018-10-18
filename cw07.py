@@ -53,9 +53,6 @@ def gen_gaussian_array(a, b, n=1000):
     domain and range, stored as a pair of numpy arrays.
     
     """
-    #x = np.linspace(a,b,endpoint=True , n=1000)
-    #return x
-    #for i in range():
     
     def sinc(x):
         sinx=numpy.sin(x)/x
@@ -67,7 +64,7 @@ def gen_gaussian_array(a, b, n=1000):
     
 
     def gauss(x):
-        gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2)
+        gauss=((1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2))
         return (gauss)
     
     list1 = []
@@ -75,13 +72,41 @@ def gen_gaussian_array(a, b, n=1000):
     for i in x:
         list1.append(gauss(i))
     g = np.array(list1)
+    
+    
     plt.plot(g)
     plt.show()
     
     
     return(x,g)
 
-    pass
+
+    def plotc(a,b,n=1000):
+        listc = []
+        x,y = gen_gaussian_array(a,b,n)
+        for i in x:
+            if (i == 0):
+                listc.append(0)
+                
+            else:
+                listc.append(sinc(i))                
+                
+        plt.plot(x,clist)
+        plt.plot(x,y)
+        plt.show()
+
+    def plotf(a,b,n=1000):
+        listf= []
+        x,y = gen_gaussian_array(a,b,n)
+        for i in x:
+            if (i == 0):
+                listf.append(0)
+            else:
+                listf.append(sinf(i))
+                
+        plt.plot(x,listf)
+        plt.plot(x,y)
+        ply.show()
     """
     Args:
         a (float) : Lower bound of domain
