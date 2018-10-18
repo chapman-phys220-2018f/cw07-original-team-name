@@ -16,7 +16,21 @@ python lists.
 
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
+def gauss(x):
+    gauss=1/math.sqrt(2*math.pi))*math.exp(-x**2/2
+    return (gauss)
+
+def sinx(x):
+    sinx=math.sin(x)/x
+    return (sinx)
+
+def sin1(x):
+    sin1=math.sin(1/x)
+    return (sin1)
+                                           
+                                           
 def gen_gaussian_list(a, b, n=1000):
     """gen_gaussian_list(a, b, n=1000)
     Generate a discrete approximation of a Gaussian function, including its
