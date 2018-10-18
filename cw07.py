@@ -67,7 +67,7 @@ def gen_gaussian_array(a, b, n=1000):
     
 
     def gauss(x):
-    gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2
+    gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2)
     return (gauss)
     
     list1 = []
