@@ -53,60 +53,13 @@ def gen_gaussian_array(a, b, n=1000):
     domain and range, stored as a pair of numpy arrays.
     
     """
-    
-    def sinc(x):
-        sinx=numpy.sin(x)/x
-        return (sinx)
-
-    def sinf(x):
-        sin1=numpy.sin(1/x)
-        return (sin1)
-    
-
-    def gauss(x):
-        gauss=((1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2))
-        return (gauss)
-    
     list1 = []
     x = np.linspace(a,b,endpoint=True,n=1000)
     for i in x:
         list1.append(gauss(i))
     g = np.array(list1)
     
-    
-    plt.plot(g)
-    plt.show()
-    
-    
     return(x,g)
-
-
-    def plotc(a,b,n=1000):
-        listc = []
-        x,y = gen_gaussian_array(a,b,n)
-        for i in x:
-            if (i == 0):
-                listc.append(0)
-                
-            else:
-                listc.append(sinc(i))                
-                
-        plt.plot(x,clist)
-        plt.plot(x,y)
-        plt.show()
-
-    def plotf(a,b,n=1000):
-        listf= []
-        x,y = gen_gaussian_array(a,b,n)
-        for i in x:
-            if (i == 0):
-                listf.append(0)
-            else:
-                listf.append(sinf(i))
-                
-        plt.plot(x,listf)
-        plt.plot(x,y)
-        ply.show()
     """
     Args:
         a (float) : Lower bound of domain
@@ -119,6 +72,81 @@ def gen_gaussian_array(a, b, n=1000):
             g  : [g(a), ..., g(b)] Array of Gaussian values matched to x
     
    """
+
+def gen_sinc_list(a, b, n=1000)
+"""
+    Generate a discrete approximation of a Gaussian function, including its
+    domain and range, stored as a pair of numpy arrays.
+    
+    """
+    
+    def sinc(x):
+        sinx=numpy.sin(x)/x
+        return (sinx)
+    
+    list1 = []
+    x = np.linspace(a,b,endpoint=True,n=1000)
+    for i in x:
+        list1.append(gauss(i))
+    g = np.array(list1)
+    
+    return(x,g)
+
+
+def gen_sinf_list(a, b, n=1000):
+    """gen_gaussian_array(a, b, n=1000)
+    Generate a discrete approximation of a Gaussian function, including its
+    domain and range, stored as a pair of numpy arrays.
+    """
+    list1 = []
+    x = np.linspace(a,b,endpoint=True,n=1000)
+    for i in x:
+        list1.append(gauss(i))
+    g = np.array(list1)
+    
+    def sinf(x):
+        sin1=numpy.sin(1/x)
+        return (sin1)
+    
+    
+    
+    
+    return(x,g)
+
+
+
+def gauss(x):
+    gauss=((1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2))
+    return (gauss)
+
+
+
+def plotc(a,b,n=1000):
+    listc = []
+    x,y = gen_gaussian_array(a,b,n)
+    for i in x:
+        if (i == 0):
+            listc.append(0)
+
+        else:
+            listc.append(sinc(i))                
+
+    plt.plot(x,clist)
+    plt.plot(x,y)
+    plt.show()
+
+def plotf(a,b,n=1000):
+    listf= []
+    x,y = gen_gaussian_array(a,b,n)
+    for i in x:
+        if (i == 0):
+            listf.append(0)
+        else:
+            listf.append(sinf(i))
+
+    plt.plot(x,listf)
+    plt.plot(x,y)
+    ply.show()
 
 
 def main(a,b,n=1000):
