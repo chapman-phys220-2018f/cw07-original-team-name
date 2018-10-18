@@ -18,17 +18,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-def gauss(x):
-    gauss=1/math.sqrt(2*math.pi))*math.exp(-x**2/2
-    return (gauss)
 
-def sinx(x):
-    sinx=math.sin(x)/x
-    return (sinx)
-
-def sin1(x):
-    sin1=math.sin(1/x)
-    return (sin1)
                                            
                                            
 def gen_gaussian_list(a, b, n=1000):
@@ -67,6 +57,18 @@ def gen_gaussian_array(a, b, n=1000):
     #return x
     #for i in range():
     
+    def sinx(x):
+        sinx=numpy.sin(x)/x
+        return (sinx)
+
+    def sin1(x):
+        sin1=numpy.sin(1/x)
+        return (sin1)
+    
+
+    def gauss(x):
+    gauss=1/numpy.sqrt(2*numpy.pi))*numpy.exp(-x**2/2
+    return (gauss)
     
     list1 = []
     x = np.linspace(a,b,endpoint=True,n=1000)
